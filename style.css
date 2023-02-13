@@ -143,7 +143,7 @@ html{
 section{
     padding: 100px 0;
 }
-.about, .services, .skills, .contact, .footer{
+.about, .services, .skills, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -446,6 +446,37 @@ footer{
     padding: 20px 23px;
     color: #fff;
     text-align: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    margin: auto;
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+footer li{
+    list-style: none;
+    display: inline-block;
+}
+footer li i{
+    display: block;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+footer li i:hover{
+    color: crimson;
+}
+footer .footer{
+    display: block;
+    padding-top: 10px;
+    font-size: 14px;
 }
 footer span a{
     color: crimson;
