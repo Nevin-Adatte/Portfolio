@@ -290,8 +290,11 @@ section .title::after{
 .skills .skills-content .left p{
     text-align: justify;
 }
-.additional-content{
+/* .additional-content{
     display: none;
+} */
+.red{
+    color: crimson;
 }
 .skills .skills-content .left button{
     display: inline-block;
