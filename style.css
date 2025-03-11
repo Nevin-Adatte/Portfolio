@@ -59,7 +59,7 @@ html{
     color: crimson;
 }
 .navbar.sticky .menu li a:hover{
-    color: crimson;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* menu btn  */
@@ -135,7 +135,7 @@ html{
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: crimson;
+    color: rgb(255, 255, 255);
     background: none;
 }
 
@@ -240,8 +240,19 @@ section .title::after{
 }
 .services .title::after{
     background: #111;
-    content: "what i provide";
+    content: "what i build";
 }
+/* trial */
+.services .serv-content .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.services .serv-content .card a:hover {
+    color: white;
+}
+/* end */
 .services .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
@@ -274,7 +285,7 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-/* service section styling */
+/* skills section styling */
 
 .skills .title::after{
     content: "what i know";
