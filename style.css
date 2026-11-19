@@ -143,7 +143,7 @@ html{
 section{
     padding: 100px 0;
 }
-.about, .services, .skills, .contact, footer{
+.about, .services, .experience, .skills, .education, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -225,64 +225,188 @@ section .title::after{
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
+.about .about-content .right a i{
+    margin-right: 8px;
+}
 .about .about-content .right a:hover{
     color: crimson;
     background: none;
 }
 
+/* experience section styling */
+.experience{
+    background: #111;
+    color: #fff;
+}
+.experience .title::before{
+    background: #fff;
+}
+.experience .title::after{
+    background: #111;
+    content: "where i worked";
+}
+.experience .exp-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.experience .exp-content .card{
+    width: calc(50% - 15px);
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border-left: 4px solid crimson;
+    display: flex;
+    flex-direction: column;
+}
+.experience .exp-content .card:hover{
+    background: #262626;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.25);
+}
+.experience .exp-content .card .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.experience .exp-content .card .role{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.experience .exp-content .card .duration{
+    font-size: 13px;
+    color: #ff6584;
+    background: rgba(220, 20, 60, 0.15);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.experience .exp-content .card .company{
+    font-size: 16px;
+    color: #ddd;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.experience .exp-content .card ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.experience .exp-content .card ul li{
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.5;
+}
+.experience .exp-content .card ul li:last-child{
+    margin-bottom: 0;
+}
+.experience .exp-content .card ul li::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: crimson;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
 /* service section styling */
 .services{
     color: #fff;
-    background: #111;
+    background: #181818;
 }
 .services .title::before{
     background: #fff;
 }
 .services .title::after{
-    background: #111;
+    background: #181818;
     content: "what i build";
 }
-/* trial */
-.services .serv-content .card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+.services .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 50px;
 }
-
-.services .serv-content .card a:hover {
-    color: white;
-}
-/* end */
 .services .serv-content .card{
-    width: calc(33% - 20px);
+    width: calc(50% - 15px);
     background: #222;
     text-align: center;
     border-radius: 6px;
-    padding: 20px 25px;
+    padding: 25px 25px;
+    margin-bottom: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.services .serv-content .card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.services .serv-content .card a:hover {
+    color: white;
 }
 .services .serv-content .card:hover{
     background: crimson;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .services .serv-content .card:hover .box{
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 .services .serv-content .card i{
-    font-size: 50px;
+    font-size: 45px;
     color: crimson;
     transition: color 0.3s ease;
+    margin-bottom: 10px;
 }
 .services .serv-content .card:hover i{
     color: #fff;
 }
 .services .serv-content .card .text{
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 8px 0 6px 0;
+    color: #fff;
+}
+.services .serv-content .card .tech{
+    font-size: 13px;
     font-weight: 500;
-    margin: 10px 0 7px 0;
+    color: #ff6584;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover .tech{
+    color: #fff;
+    opacity: 0.95;
+}
+.services .serv-content .card p{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover p{
+    color: #fff;
 }
 
 /* skills section styling */
@@ -350,20 +474,130 @@ section .title::after{
     top: 0;
     background: crimson;
 }
-.skills-content .right .html::before{
+.skills-content .right .python::before{
     width: 90%;
 }
-.skills-content .right .css::before{
-    width: 75%;
+.skills-content .right .pytorch::before{
+    width: 85%;
 }
-.skills-content .right .js::before{
-    width: 65%;
+.skills-content .right .opencv::before{
+    width: 85%;
 }
-.skills-content .right .php::before{
+.skills-content .right .sklearn::before{
     width: 80%;
 }
-.skills-content .right .mysql::before{
-    width: 70%;
+.skills-content .right .c-lang::before{
+    width: 75%;
+}
+.skills-content .right .web-tech::before{
+    width: 75%;
+}
+
+/* education & achievements section styling */
+.education{
+    background: #111;
+    color: #fff;
+}
+.education .title::before{
+    background: #fff;
+}
+.education .title::after{
+    background: #111;
+    content: "academic background";
+}
+.education .edu-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.education .edu-content .column{
+    width: calc(50% - 15px);
+}
+.education .edu-content .column-title{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2a2a2a;
+}
+.education .edu-content .column-title i{
+    color: crimson;
+    font-size: 20px;
+}
+.education .edu-card{
+    background: #222;
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin-bottom: 20px;
+    border-left: 4px solid crimson;
+    transition: all 0.3s ease;
+}
+.education .edu-card:hover{
+    background: #262626;
+    transform: translateX(5px);
+}
+.education .edu-card .degree{
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+}
+.education .edu-card .institution{
+    font-size: 15px;
+    color: #eee;
+    margin-bottom: 8px;
+}
+.education .edu-card .details{
+    font-size: 14px;
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.education .edu-card .score{
+    color: #ff6584;
+    font-weight: 600;
+}
+.education .achieve-card{
+    background: #222;
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin-bottom: 20px;
+    border-left: 4px solid crimson;
+    transition: all 0.3s ease;
+}
+.education .achieve-card:hover{
+    background: #262626;
+    transform: translateX(5px);
+}
+.education .achieve-card .badge{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+.education .achieve-card .achieve-title{
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+.education .achieve-card .achieve-desc{
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.5;
 }
 
 /* contact section styling */
@@ -580,8 +814,16 @@ footer span a:hover{
         flex: 100%;
     }
     .services .serv-content .card{
-        width: calc(50% - 10px);
+        width: 100%;
         margin-bottom: 20px;
+    }
+    .experience .exp-content .card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .education .edu-content .column{
+        width: 100%;
+        margin-bottom: 30px;
     }
     .skills .skills-content .column,
     .contact .contact-content .column{
@@ -603,7 +845,9 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .services .serv-content .card,
+    .experience .exp-content .card,
+    .education .edu-content .column{
         width: 100%;
     }
 }
